@@ -23,7 +23,7 @@ app.get("/networking",function(req,res){
 });
 
 app.get("/cryptography",function(req,res){
-    res.render("cryptography.ejs");
+    res.render("cryptography.ejs", {randomName:fakeData.name.findName()});
 });
 
 
