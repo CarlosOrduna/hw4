@@ -7,11 +7,11 @@ var fakeData = require("faker");
  
 //routes
 app.get("/", function(req, res) {
-    res.render("index.ejs", {randomName:fakeData.name.findName()});
+    res.render("index.html");
 });
 
 app.get("/index", function(req, res) {
-    res.render("index.ejs", {randomName:fakeData.name.findName()});
+    res.render("index.html");
 });
 
 app.get("/security",function(req,res){
