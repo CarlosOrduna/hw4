@@ -15,11 +15,11 @@ app.get("/index", function(req, res) {
 });
 
 app.get("/security",function(req,res){
-    res.render("security.ejs");
+    res.render("security.ejs", {randomName:fakeData.name.findName()});
 });
 
 app.get("/networking",function(req,res){
-    res.render("networking.ejs");
+    res.render("networking.ejs", {randomName:fakeData.name.findName()});
 });
 
 app.get("/cryptography",function(req,res){
