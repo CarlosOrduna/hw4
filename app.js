@@ -15,24 +15,24 @@ app.get("/index", function(req, res) {
 });
 
 app.get("/security",function(req,res){
-    res.render("security.ejs", {randomName:fakeData.name.findName()});
+    res.render("security.ejs");
 });
 
 app.get("/networking",function(req,res){
-    res.render("networking.ejs", {randomName:fakeData.name.findName()});
+    res.render("networking.ejs");
 });
 
 app.get("/cryptography",function(req,res){
-    res.render("cryptography.ejs", {randomName:fakeData.name.findName()});
+    res.render("cryptography.ejs");
 });
 
 
-//server listener
-app.listen("8080","127.0.0.1", function(){
-    console.log("Express Server is Running...");
-});
-
-// //heroku listener
-// app.listen(process.env.PORT, process.env.IP, function(){
-//     console.log("Running Express Server...");
+// //server listener
+// app.listen("8080","127.0.0.1", function(){
+//     console.log("Express Server is Running...");
 // });
+
+//heroku listener
+app.listen(process.env.PORT, process.env.IP, function(){
+    console.log("Running Express Server...");
+});
